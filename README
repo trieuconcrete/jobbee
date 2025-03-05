@@ -1,0 +1,21 @@
+
+
+1. pip install boto3 django-cors-headers django-dotenv django-filter django-storages djangorestframework djangorestframework-simplejwt geocoder gunicorn whitenoise psycopg2-binary dj-database-url
+2. brew install gdal geos
+3. export GDAL_LIBRARY_PATH=/opt/homebrew/lib/libgdal.dylib
+4. export GEOS_LIBRARY_PATH=/opt/homebrew/lib/libgeos.dylib
+
+
+## Install GEOS
+1. brew install geos
+2. pip install gdal psycopg2-binary
+3. Set Environment Variables (Mac/Linux)
+Add this to your ~/.bashrc or ~/.zshrc (for Mac users):
+
+```
+export GEOS_LIBRARY_PATH=$(brew --prefix geos)/lib/libgeos_c.dylib
+export GDAL_LIBRARY_PATH=$(brew --prefix gdal)/lib/libgdal.dylib
+```
+
+4. source ~/.zshrc
+5. python manage.py runserver
